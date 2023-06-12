@@ -1,0 +1,33 @@
+.image-list{
+    column-count: 3;
+    column-gap: 0;
+    padding: 2rem 0;
+
+    &-item{
+        margin: 0;
+        padding: 0;
+        img{
+            width: 100%;
+            display: block;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+
+    .image-blur{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        img{
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+
+        &.image-loaded{
+            img{
+                opacity: 1;
+            }
+        }
+    }
+}
